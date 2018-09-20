@@ -1,0 +1,87 @@
+/*
+Theme Name: Impreza Child
+Template: Impreza
+Version: 1.0
+Author:	UpSolution
+Theme URI: http://impreza.us-themes.com/
+Author URI: http://us-themes.com/
+*/
+
+/*Add your own styles here:*/
+
+.child-subtitulo {
+	margin: 1.5rem 3rem 1.5rem 3rem;
+	text-align: center;
+}
+
+h4.child-subtitulo-texto {
+	font-weight: bold;
+	text-decoration: underline;
+	color: #ffffff;
+	vertical-align: middle;
+	padding: 0.3rem;
+	background-color: #2b2c36;
+	border-radius: 1rem;
+}
+
+.g-autor:before {
+	content:'\f2bb';
+	font-family:fontawesome;
+	font-size: 1.3rem;
+	vertical-align:middle;
+	margin-right:0.2rem;
+	opacity:0.5
+}
+
+.g-categoria:before {
+	content:'\f07c';
+}
+
+.g-colecao:before {
+	content:'\f5db';
+}
+
+.g-estilo {
+	font-size: 1.2rem;
+	vertical-align: middle;
+}
+
+.g-prateleira:before {
+	content:'\f480';
+}
+
+.g-taxonomias {
+	font-size: 1rem;
+	padding: 0 0 0.2rem 0.2rem;
+}
+
+.g-taxonomias:before {
+	font-family:fontawesome;
+	vertical-align:middle;
+	margin-right:0.2rem;
+	opacity:0.5
+}
+
+.g-tematicas:before {
+	content:'\f02c';
+}
+
+.l-section.for_blogpost div.w-blogpost-preview {
+	background-color: #ffffff;
+}
+
+.w-blogpost {
+	display: flex;
+}
+
+.w-blogpost-body {
+	display: inline-block;
+	width: 400px;
+}
+
+.w-blogpost-preview {
+	display: inline-block;
+	width: 400px;
+	margin-right: 20px;
+}
+
