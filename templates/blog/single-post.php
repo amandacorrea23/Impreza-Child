@@ -1,8 +1,8 @@
 <?php defined( 'ABSPATH' ) OR die( 'This script cannot be accessed directly.' );
 
-//SINGLE-POST - 2018-09-18
+//SINGLE-POST - 2018-09-20
 
-/**
+/*
  * Outputs one single post.
  *
  * (!) Should be called after the current $wp_query is already defined
@@ -168,18 +168,20 @@ $post_id = get_the_ID();
 				<h2 class="w-blogpost-title entry-title" style="display: inline; font-size: 1.5rem"><?php echo the_field('livro_info_subtitulo')?></h2>
 				<div style="margin-top: 2rem"><?php
 					$autores = get_field('livro_info_autor');
+					$i = 0;
 					if ($autores) { 
 						foreach ($autores as $id) {
+							$i++;
 							$nome = get_field('autor_nome', $id);
 							$abnt = get_field('autor_abnt', $id);
-							$org = get_field('livro_info_organizador', $post_id); ?>
+							$org = get_field('livro_info_organizador_grupo', $post_id); ?>
 							<div class="g-autor" style ="margin-top: 0rem">
 								<h3 class="g-estilo" style="display: inline; font-size: 1.3rem">
 									<a href="<?php echo get_permalink($id) ?>"><?php echo $nome ?></a>
 								</h3><br/>
 								<h5 style="padding-top: 0.2rem; font-weight: bold; margin-bottom: 0.5rem"> <?php echo $abnt ?></h5>
 								<span><?php 
-									if ($org == true) {
+									if ($org[$i] == true) {
 										echo ' (org.)';
 									} ?>
 								</span>
