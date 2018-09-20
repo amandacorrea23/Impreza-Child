@@ -174,18 +174,19 @@ $post_id = get_the_ID();
 							$i++;
 							$nome = get_field('autor_nome', $id);
 							$abnt = get_field('autor_abnt', $id);
-							$org = get_field('livro_info_organizador_grupo', $post_id); ?>
+							$org = get_field('livro_info_organizador_' . $i, $post_id); ?>
 							<div class="g-autor" style ="margin-top: 0rem">
 								<h3 class="g-estilo" style="display: inline; font-size: 1.3rem">
 									<a href="<?php echo get_permalink($id) ?>"><?php echo $nome ?></a>
 								</h3><br/>
-								<h5 style="padding-top: 0.2rem; font-weight: bold; margin-bottom: 0.5rem"> <?php echo $abnt ?></h5>
+								<h5 style="padding-top: 0.2rem; font-weight: bold; margin-bottom: 0.5rem; display: inline"> <?php echo $abnt ?></h5>
 								<span><?php 
-									if ($org[$i] == true) {
+									if ($org == true) {
 										echo ' (org.)';
 									} ?>
 								</span>
 							</div><?php
+							
 						}
 					}?>
 				</div>
